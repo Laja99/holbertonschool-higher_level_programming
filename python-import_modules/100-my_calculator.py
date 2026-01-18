@@ -11,16 +11,11 @@ if __name__ == "__main__":
     op = sys.argv[2]
     b = int(sys.argv[3])
 
-    if op == "+":
-        result = add(a, b)
-    elif op == "-":
-        result = sub(a, b)
-    elif op == "*":
-        result = mul(a, b)
-    elif op == "/":
-        result = div(a, b)
-    else:
+    operations = {"+": add, "-": sub, "*": mul, "/": div}
+
+    if op not in operations:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
+    result = operations[op](a, b)
     print(f"{a} {op} {b} = {result}")
