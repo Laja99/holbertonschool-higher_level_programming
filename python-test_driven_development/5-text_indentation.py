@@ -23,6 +23,8 @@ def text_indentation(text):
     i = 0
     n = len(text)
 
+    text = text.strip()
+
     while i < n:
 
         result += text[i]

@@ -1,5 +1,17 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
+>>> text_indentation("Holberton.School")
+Holberton.
+
+School
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+
+School?
+
+How are you:
+
+John
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
 ... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
@@ -101,6 +113,6 @@ Test with multiple?
 
  OK.
 >>> text_indentation("   Spaces at start.   and end   ")
-   Spaces at start.
+Spaces at start.
 
 and end
