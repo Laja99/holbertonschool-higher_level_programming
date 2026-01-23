@@ -15,24 +15,27 @@ def text_indentation(text):
     Raises:
         TypeError: If text is not a string
     """
-
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    result = ""
     i = 0
     n = len(text)
 
     while i < n:
-        result += text[i]
-        if text[i] in ".?:":
-            result += "\n\n"
+        # Skip spaces at the beginning of a line
+        if text[i] == ' ' and (i == 0 or text[i-1] in '.?:' or
+                               text[i-1] == '\n'):
             i += 1
+            continue
+
+        print(text[i], end='')
+
+        if text[i] in '.?:':
+            print("\n")
+            i += 1
+            # Skip spaces after punctuation
             while i < n and text[i] == ' ':
                 i += 1
             continue
-        i += 1
 
-    lines = result.split('\n')
-    for line in lines:
-        print(line.rstrip())
+        i += 1
