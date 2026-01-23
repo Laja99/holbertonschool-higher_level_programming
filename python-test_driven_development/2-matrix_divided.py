@@ -2,8 +2,6 @@
 """
 This module provides a function to divide all elements of a matrix by a divisor.
 """
-
-
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix by div.
