@@ -4,8 +4,8 @@
 My name is John Smith
 >>> say_my_name("Walter", "White")
 My name is Walter White
->>> say_my_name("Bob") # doctest: +ELLIPSIS
-My name is Bob...
+>>> say_my_name("Bob")
+My name is Bob
 >>> try:
 ...     say_my_name(12, "White")
 ... except Exception as e:
@@ -26,9 +26,9 @@ first_name must be a string
 ... except Exception as e:
 ...     print(e)
 last_name must be a string
->>> say_my_name("", "") # doctest: +ELLIPSIS
-My name is...
->>> say_my_name("John", "") # doctest: +ELLIPSIS
-My name is John...
->>> say_my_name("", "Smith") # doctest: +ELLIPSIS
-My name is Smith...
+>>> say_my_name("", "")
+My name is
+>>> say_my_name("John", "")
+My name is John
+>>> say_my_name("", "Smith")
+My name is Smith
