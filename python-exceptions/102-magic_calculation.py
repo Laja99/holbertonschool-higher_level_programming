@@ -3,12 +3,14 @@
 
 def magic_calculation(a, b):
     """
-    Mimics a bytecode-based calculation.
+    Performs a specific calculation:
+    - If a < b, returns the sum of squares from a to b - 1.
+    - Otherwise, returns the sum a + b.
     """
-    result = 0
     if a < b:
+        result = 0
         for i in range(a, b):
             result += i ** 2
+        return result
     else:
-        result = a + b
-    return result
+        return a + b
