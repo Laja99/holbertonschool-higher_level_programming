@@ -18,11 +18,6 @@ def matrix_divided(matrix, div):
         TypeError: If each row of the matrix is not of the same size
         TypeError: If div is not a number
         ZeroDivisionError: If div is 0
-
-    Example:
-    >>> matrix = [[1, 2, 3], [4, 5, 6]]
-    >>> matrix_divided(matrix, 3)
-    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
     """
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
@@ -40,4 +35,5 @@ def matrix_divided(matrix, div):
     for row in matrix:
         new_row = [round(el / div, 2) for el in row]
         new_matrix.append(new_row)
+    
     return new_matrix
