@@ -1,6 +1,5 @@
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>matrix_divided() missing 1 required positional argument: 'div'
->>>matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 
 >>> matrix_divided([[3]], 3)
 [[1.0]]
@@ -33,3 +32,5 @@ missing 1 required positional argument: 'div'
 missing 2 required positional arguments: 'matrix' and 'div'
 >>> matrix_divided([[3, 6], [9, 12]], float("inf"))
 [[0.0, 0.0], [0.0, 0.0]]
+>>>matrix_divided() missing 1 required positional argument: 'div'
+>>>matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
