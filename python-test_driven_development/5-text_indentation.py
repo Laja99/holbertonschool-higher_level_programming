@@ -5,6 +5,7 @@ This module defines a function that prints text with 2 new lines
 after '.', '?' and ':' characters, removing leading/trailing spaces.
 """
 
+
 def text_indentation(text):
     """
     Prints a text with 2 new lines after '.', '?' and ':'.
@@ -18,12 +19,12 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    line = ""
+    result = ""
     for char in text:
-        line += char
+        result += char
         if char in ".?:":
-            print(line.strip())
+            print(result.strip())
             print()
-            line = ""
-    if line.strip():
-        print(line.strip(), end="")
+            result = ""
+    if result.strip():
+        print(result.strip(), end="")
