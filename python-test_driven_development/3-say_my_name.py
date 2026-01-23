@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """
 Module that defines a function to print a person's full name.
-
-Provides say_my_name(first_name, last_name="") which prints:
-"My name is <first name> <last name>" with correct spacing.
 """
 
 
