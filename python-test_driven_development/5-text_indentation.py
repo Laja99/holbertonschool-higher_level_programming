@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
 Module for text indentation
-Contains function to print text with 2 new lines after ., ? and :
+Contains function to print text with a newline after ., ? and :
 """
 
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each of these characters: ., ? and :
+    Prints a text with a newline after each of these characters: ., ? and :
 
     Args:
         text (str): The text to print
@@ -19,23 +19,13 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     i = 0
-    n = len(text)
-
-    while i < n:
-        # Skip spaces at the beginning of a line
-        if text[i] == ' ' and (i == 0 or text[i-1] in '.?:' or
-                               text[i-1] == '\n'):
+    while i < len(text):
+        if text[i] in ".?:":
+            print(text[i])
+            print()
             i += 1
-            continue
-
-        print(text[i], end='')
-
-        if text[i] in '.?:':
-            print("\n")
-            i += 1
-            # Skip spaces after punctuation
-            while i < n and text[i] == ' ':
+            while i < len(text) and text[i] == " ":
                 i += 1
-            continue
-
-        i += 1
+        else:
+            print(text[i], end="")
+            i += 1

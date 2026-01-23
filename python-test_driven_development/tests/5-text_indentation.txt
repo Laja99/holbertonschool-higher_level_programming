@@ -4,35 +4,24 @@
 Holberton School
 >>> text_indentation("Holberton.School")
 Holberton.
-
 School
 >>> text_indentation("Holberton. School? How are you: John")
 Holberton.
-
 School?
-
 How are you:
-
 John
 >>> text_indentation("Hello. How are you? Good: I hope.")
 Hello.
-
 How are you?
-
 Good:
-
 I hope.
 >>> text_indentation("Lorem ipsum dolor sit amet. consectetur adipiscing elit.")
 Lorem ipsum dolor sit amet.
-
 consectetur adipiscing elit.
 >>> text_indentation("First line. Second line? Third line: Fourth line")
 First line.
-
 Second line?
-
 Third line:
-
 Fourth line
 >>> text_indentation("")
 >>> text_indentation("   ")
@@ -60,25 +49,16 @@ text must be a string
 text must be a string
 >>> text_indentation("One. Two. Three.")
 One.
-
 Two.
-
 Three.
 >>> text_indentation("Test with multiple??? Yes::: OK.")
 Test with multiple?
-
 ?
-
 ?
-
 Yes:
-
 :
-
 :
-
 OK.
 >>> text_indentation("   Spaces at start.   and end   ")
 Spaces at start.
-
 and end
