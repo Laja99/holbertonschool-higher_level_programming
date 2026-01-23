@@ -105,13 +105,13 @@ Test with multiple?
 
 ?
 
- Yes:
+Yes:
 
 :
 
 :
 
- OK.
+OK.
 >>> text_indentation("   Spaces at start.   and end   ")
 Spaces at start.
 

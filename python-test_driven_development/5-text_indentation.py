@@ -24,9 +24,9 @@ def text_indentation(text):
     n = len(text)
 
     while i < n:
-        print(text[i], end='')
+        result += text[i]
         if text[i] in ".?:":
-            print("\n")
+            result += "\n\n"
             i += 1
             while i < n and text[i] == ' ':
                 i += 1
@@ -34,8 +34,5 @@ def text_indentation(text):
         i += 1
 
     lines = result.split('\n')
-    for i in range(len(lines)):
-        if i == len(lines) - 1:
-            print(lines[i], end='')
-        else:
-            print(lines[i])
+    for line in lines:
+        print(line.rstrip())
