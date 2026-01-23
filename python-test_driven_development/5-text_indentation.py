@@ -24,11 +24,10 @@ def text_indentation(text):
     n = len(text)
 
     while i < n:
-        result += text[i]
+        print(text[i], end='')
         if text[i] in ".?:":
-            result += "\n\n"
+            print("\n")
             i += 1
-
             while i < n and text[i] == ' ':
                 i += 1
             continue
