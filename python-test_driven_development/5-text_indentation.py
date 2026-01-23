@@ -23,22 +23,20 @@ def text_indentation(text):
     i = 0
     n = len(text)
 
-    text = text.strip()
-
     while i < n:
-
         result += text[i]
-
         if text[i] in ".?:":
             result += "\n\n"
-
             i += 1
+
             while i < n and text[i] == ' ':
                 i += 1
             continue
-
         i += 1
 
     lines = result.split('\n')
-    for line in lines:
-        print(line.rstrip())
+    for i in range(len(lines)):
+        if i == len(lines) - 1:
+            print(lines[i], end='')
+        else:
+            print(lines[i])
