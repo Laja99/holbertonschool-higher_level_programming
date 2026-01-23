@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains one function, add_integer.
-It adds two integers and checks their types.
-Floats are casted to integers before addition.
+ Adds two integers, casting floats to int and raising TypeError if wrong type.
 """
 
 
