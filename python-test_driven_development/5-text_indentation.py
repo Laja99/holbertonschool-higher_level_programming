@@ -1,29 +1,36 @@
 #!/usr/bin/python3
 """
 Module for text indentation
-This module defines a function that prints text with 2 new lines
-after '.', '?' and ':' characters, removing leading/trailing spaces.
+Contains function to print text with 2 new lines after ., ? and :
 """
+
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after '.', '?' and ':'.
+    Prints a text with 2 new lines after each of these characters: ., ? and :
 
     Args:
-        text (str): The text to process and print.
+        text (str): The text to print
 
     Raises:
-        TypeError: If text is not a string.
+        TypeError: If text is not a string
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    i = 0
     line = ""
-    for char in text:
-        line += char
-        if char in ".?:":
-            print(line.strip())
-            print()
+    while i < len(text):
+        if text[i] in ".?:":
+            line += text[i]
+            print(line.strip() + "\n\n", end="")
             line = ""
+            i += 1
+            while i < len(text) and text[i] == " ":
+                i += 1
+        else:
+            line += text[i]
+            i += 1
+    
     if line.strip():
         print(line.strip(), end="")
