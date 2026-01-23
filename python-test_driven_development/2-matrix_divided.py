@@ -2,20 +2,23 @@
 """Module for matrix division"""
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=None, div=None):
     """
     Divide all elements of a matrix by a divisor
     Args:
         matrix: List of lists containing integers or floats
         div: Number to divide by (integer or float)
-
     Returns:
         New matrix with all elements divided by div
-
     Raises:
         TypeError: If matrix is not valid
         ZeroDivisionError: If div is zero
     """
+    if matrix is None:
+        msg = "missing 2 required positional arguments: 'matrix' and 'div'"
+        raise TypeError(msg)
+    if div is None:
+        raise TypeError("missing 1 required positional argument: 'div'")
     msg_error = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
@@ -35,7 +38,8 @@ def matrix_divided(matrix, div):
     row_size = len(matrix[0])
     for row in matrix:
         if len(row) != row_size:
-            raise TypeError("Each row of the matrix must have the same size")
+            msg = "Each row of the matrix must have the same size"
+            raise TypeError(msg)
 
     for row in matrix:
         for element in row:
