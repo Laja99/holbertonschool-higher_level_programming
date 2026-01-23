@@ -32,4 +32,4 @@ def text_indentation(text):
             line += text[i]
             i += 1
     if line.strip():
-        print(line.strip())
+        print(line.strip(), end="")
