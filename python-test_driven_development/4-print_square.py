@@ -22,7 +22,7 @@ def print_square(size):
 
     if size < 0:
         raise ValueError("size must be >= 0")
-    error ="print_square() missing 1 required positional argument: 'size'"
+    error = "print_square() missing 1 required positional argument: 'size'"
     if size is None:
         raise TypeError(error)
 
