@@ -23,5 +23,8 @@ def print_square(size):
     if size < 0:
         raise ValueError("size must be >= 0")
 
+    if size is None:
+        raise TypeError("print_square() missing 1 required positional argument: 'size'")
+
     for i in range(size):
         print("#" * size)
