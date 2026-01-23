@@ -24,11 +24,11 @@ matrix must be a matrix (list of lists) of integers/floats
 ...     matrix_divided([[3, 9], [12, 15]])
 ... except TypeError as e:
 ...     print(e)
-matrix_divided() missing 1 required positional argument: 'div'
+missing 1 required positional argument: 'div'
 >>> try:
 ...     matrix_divided()
 ... except TypeError as e:
 ...     print(e)
-matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+missing 2 required positional arguments: 'matrix' and 'div'
 >>> matrix_divided([[3, 6], [9, 12]], float("inf"))
 [[0.0, 0.0], [0.0, 0.0]]

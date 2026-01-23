@@ -14,12 +14,14 @@ def matrix_divided(matrix=None, div=None):
         TypeError: If matrix is not valid
         ZeroDivisionError: If div is zero
     """
-    if matrix is None:
+    if matrix is None and div is None:
         msg = "missing 2 required positional arguments: 'matrix' and 'div'"
         raise TypeError(msg)
     if div is None:
         raise TypeError("missing 1 required positional argument: 'div'")
+
     msg_error = "matrix must be a matrix (list of lists) of integers/floats"
+
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
