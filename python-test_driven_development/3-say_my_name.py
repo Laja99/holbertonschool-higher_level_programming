@@ -13,6 +13,7 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
     if first_name is None or last_name is None:
-        raise TypeError("first_name must be a string or last_name must be a string")
+        e = "first_name must be a string or last_name must be a string"
+        raise TypeError(e)
 
     print("My name is", first_name, last_name)
