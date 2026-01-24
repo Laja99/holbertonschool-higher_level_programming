@@ -1,64 +1,57 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("Holberton School")
-Holberton School
->>> text_indentation("Holberton.School")
-Holberton.
-School
->>> text_indentation("Holberton. School? How are you: John")
-Holberton.
-School?
-How are you:
-John
->>> text_indentation("Hello. How are you? Good: I hope.")
-Hello.
-How are you?
-Good:
-I hope.
->>> text_indentation("Lorem ipsum dolor sit amet. consectetur adipiscing elit.")
-Lorem ipsum dolor sit amet.
-consectetur adipiscing elit.
->>> text_indentation("First line. Second line? Third line: Fourth line")
-First line.
-Second line?
-Third line:
-Fourth line
->>> text_indentation("")
->>> text_indentation("   ")
->>> text_indentation("Hello")
-Hello
->>> try:
-...     text_indentation(123)
-... except Exception as e:
-...     print(e)
-text must be a string
->>> try:
-...     text_indentation(None)
-... except Exception as e:
-...     print(e)
-text must be a string
->>> try:
-...     text_indentation(3.14)
-... except Exception as e:
-...     print(e)
-text must be a string
->>> try:
-...     text_indentation(["Hello"])
-... except Exception as e:
-...     print(e)
-text must be a string
->>> text_indentation("One. Two. Three.")
-One.
-Two.
-Three.
->>> text_indentation("Test with multiple??? Yes::: OK.")
-Test with multiple?
+Test string with delimiters
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem""")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
+Non autem hoc:
+<BLANKLINE>
+igitur ne illud quidem
+
+-------------------------------
+Test if <text> is None
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+-------------------------------
+Test if <text> is an integer
+>>> text_indentation(13)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+-------------------------------
+Test if <text> is a character
+>>> text_indentation('H')
+H
+
+-------------------------------
+Test if <text> is a character .
+>>> text_indentation('.')
+.
+<BLANKLINE>
+
+-------------------------------
+Test if <text> is a character ?
+>>> text_indentation('?')
 ?
-?
-Yes:
+<BLANKLINE>
+
+-------------------------------
+Test if <text> is a character ?
+>>> text_indentation(':')
 :
-:
-OK.
->>> text_indentation("   Spaces at start.   and end   ")
-Spaces at start.
-and end
+<BLANKLINE>
+
+-------------------------------
+Test if no argument passed
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
