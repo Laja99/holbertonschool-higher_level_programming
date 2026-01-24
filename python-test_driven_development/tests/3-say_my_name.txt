@@ -15,15 +15,9 @@ TypeError: first_name must be a string or last_name must be a string
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 4, in say_my_name
-TypeError: first_name must be a string or last_name must be a string
+TypeError: last_name must be a string 
 >>> say_my_name(5, "Isaza")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 4, in say_my_name
-TypeError: first_name must be a string or last_name must be a string
->>> say_my_name("Bob", 12)
-Traceback (most recent call last):
-TypeError: first_name must be a string or last_name must be a string
->>> say_my_name(12, "Lenon")
-Traceback (most recent call last):
-TypeError: first_name must be a string or last_name must be a string
+TypeError: first_name must be a string 

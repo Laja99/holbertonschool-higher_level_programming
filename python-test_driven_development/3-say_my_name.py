@@ -8,7 +8,9 @@ def say_my_name(first_name, last_name=""):
     """
     Print 'My name is <first_name> <last_name>'.
     """
-    str_error = "first_name must be a string or last_name must be a string"
-    if type(first_name) is not str or type(last_name) is not str:
-        raise TypeError(str_error)
+    if not isinstance(first_name, str):
+        raise TypeError("first_name must be a string")
+    if not isinstance(last_name, str):
+        raise TypeError("last_name must be a string")
+
     print("My name is", first_name, last_name)
