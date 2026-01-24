@@ -1,0 +1,61 @@
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+---------------------------------
+Test normal multiplication
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[ 7 10]
+ [15 22]]
+
+---------------------------------
+Test multiplication with 1x2 and 2x2
+>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13 16]]
+
+---------------------------------
+Test wrong type for m_a
+>>> lazy_matrix_mul("hello", [[1, 2]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a and m_b must be lists of lists of integers or floats
+
+---------------------------------
+Test wrong type for m_b
+>>> lazy_matrix_mul([[1, 2]], "world")
+Traceback (most recent call last):
+    ...
+TypeError: m_a and m_b must be lists of lists of integers or floats
+
+---------------------------------
+Test empty m_a
+>>> lazy_matrix_mul([], [[1, 2]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a and m_b can't be multiplied
+
+---------------------------------
+Test empty m_b
+>>> lazy_matrix_mul([[1, 2]], [])
+Traceback (most recent call last):
+    ...
+ValueError: m_a and m_b can't be multiplied
+
+---------------------------------
+Test non-number in m_a
+>>> lazy_matrix_mul([[1, "x"]], [[1, 2]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a and m_b must be lists of lists of integers or floats
+
+---------------------------------
+Test non-number in m_b
+>>> lazy_matrix_mul([[1, 2]], [[1, "x"]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a and m_b must be lists of lists of integers or floats
+
+---------------------------------
+Test incompatible matrices
+>>> lazy_matrix_mul([[1, 2]], [[1, 2, 3]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a and m_b can't be multiplied
