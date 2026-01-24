@@ -16,8 +16,8 @@ def say_my_name(first_name, last_name=""):
     if first_name and last_name:
         print(f"My name is {first_name} {last_name}")
     elif first_name:
-        print(f"My name is {first_name} ", end="")
+        print(f"My name is {first_name}  ", end="")
     elif last_name:
-        print(f"My name is {last_name} ", end= "")
+        print(f"My name is {last_name} ", end="")
     else:
         print("My name is")
