@@ -27,9 +27,12 @@ first_name must be a string
 last_name must be a string
 >>> say_my_name("", "")
 My name is
->>> say_my_name("John", "")
-My name is John
->>> say_my_name("", "Smith")
-My name is Smith
->>> say_my_name("Bob", "")
-My name is Bob 
+>>> say_my_name(None, "Isaza")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 4, in say_my_name
+TypeError: first_name must be a string or last_name must be a string
+>>> say_my_name("Norman", None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 4, in say_my_name
