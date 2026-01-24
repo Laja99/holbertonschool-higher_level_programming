@@ -86,3 +86,10 @@ Test incompatible matrices
 Traceback (most recent call last):
     ...
 ValueError: m_a and m_b can't be multiplied
+
+---------------------------------
+Test missing arguments
+>>> matrix_mul()
+Traceback (most recent call last):
+    ...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
