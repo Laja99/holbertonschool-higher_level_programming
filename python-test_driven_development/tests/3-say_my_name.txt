@@ -31,3 +31,5 @@ My name is
 My name is John
 >>> say_my_name("", "Smith")
 My name is Smith
+>>> say_my_name("Bob", "")
+My name is Bob 
