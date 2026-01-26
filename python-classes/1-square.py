@@ -6,7 +6,7 @@ Square generation module for Python project
 
 class Square:
     """ class Square that defines a square by multiply size"""
-    __size = 0
+    __size = None
 
     def __init__(self, size):
         """
