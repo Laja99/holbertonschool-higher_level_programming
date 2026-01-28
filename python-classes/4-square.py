@@ -30,7 +30,7 @@ class Square:
         :param self: to take self.__size
         """
         return self.__size * self.__size
-    
+
     @property
     def size(self):
         """
