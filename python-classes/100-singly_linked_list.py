@@ -13,7 +13,7 @@ class Node:
 
         Args:
             data (int): the value of the node
-            next_node (Node, optional): reference to the next node 
+            next_node (Node, optional): reference to the next node
             (default None)
 
         Raises:
