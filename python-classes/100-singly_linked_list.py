@@ -13,10 +13,12 @@ class Node:
 
         Args:
             data (int): the value of the node
-            next_node (Node, optional): reference to the next node (default None)
+            next_node (Node, optional): reference to the next node 
+            (default None)
 
         Raises:
-            TypeError: if data is not an integer or next_node is not a Node/None
+            TypeError: if data is not an integer or
+            next_node is not a Node/None
         """
         self.data = data
         self.next_node = next_node
@@ -55,7 +57,8 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """
-        Insert a new Node with value into the list at the correct sorted position.
+        Insert a new Node with value into the list
+        at the correct sorted position.
 
         Args:
             value (int): value for the new Node
