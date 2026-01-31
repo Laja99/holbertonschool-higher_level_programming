@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
-Task 01: Abstract Shape class with Circle and Rectangle implementations,
+Abstract Shape class with Circle and Rectangle implementations,
 demonstrating duck typing with a shape_info function.
 """
 
