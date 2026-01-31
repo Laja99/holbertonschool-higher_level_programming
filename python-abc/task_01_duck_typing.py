@@ -7,9 +7,10 @@ demonstrating duck typing with a shape_info function.
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     """Abstract base class for shapes"""
-    
+
     @abstractmethod
     def area(self):
         """Calculate the area of the shape"""
@@ -54,7 +55,8 @@ class Rectangle(Shape):
 
 def shape_info(shape):
     """
-    Prints the area and perimeter of any object that has .area() and .perimeter()
+    Prints the area and perimeter of any object
+    that has .area() and .perimeter()
     """
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
