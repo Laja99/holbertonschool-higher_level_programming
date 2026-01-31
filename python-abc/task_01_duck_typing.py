@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Abstract Shape class with Circle and Rectangle implementations,
+Task 01: Abstract Shape class with Circle and Rectangle implementations,
 demonstrating duck typing with a shape_info function.
 """
 
@@ -28,9 +28,11 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
+        """Return area of the circle"""
         return math.pi * (self.radius ** 2)
 
     def perimeter(self):
+        """Return perimeter of the circle"""
         return 2 * math.pi * self.radius
 
 
@@ -42,9 +44,11 @@ class Rectangle(Shape):
         self.height = height
 
     def area(self):
+        """Return area of the rectangle"""
         return self.width * self.height
 
     def perimeter(self):
+        """Return perimeter of the rectangle"""
         return 2 * (self.width + self.height)
 
 
