@@ -1,16 +1,23 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Importing the class from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Now we can create a BaseGeometry instance:
->>> bg = BaseGeometry()
+    >>> bg = BaseGeometry()
 
 The class has two methods:
 
 1. area(self)
->>> bg.area()
-Traceback (most recent call last):
-Exception: area() is not implemented
+-------------
+
+This method is not implemented and should raise an Exception:
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
 
 2. integer_validator(self, name, value)
+---------------------------------------
+
 This method validates the input:
 
 Passing valid integers should not raise any exceptions:
