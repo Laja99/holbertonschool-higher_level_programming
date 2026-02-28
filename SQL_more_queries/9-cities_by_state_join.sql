@@ -1,6 +1,2 @@
--- List all cities
-SELECT c.id, c.name, s.name
-FROM cities c,
-     (SELECT id, name FROM states) s
-WHERE c.state_id = s.id
-ORDER BY c.id ASC;
+-- Lists all cities with their states
+SELECT cities.id, cities.name, (SELECT states.name FROM states WHERE states.id = cities.state_id) FROM cities ORDER BY cities.id ASC;
