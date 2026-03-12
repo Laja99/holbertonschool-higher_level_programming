@@ -12,28 +12,32 @@ from relationship_city import City
 
 
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        sys.exit(1)
+
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
 
-    engine = create_engine(
-        f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}',
-        pool_pre_ping=True
-    )
+    try:
+        engine = create_engine(
+            f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}',
+            pool_pre_ping=True
+        )
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
+        Session = sessionmaker(bind=engine)
+        session = Session()
 
-    from sqlalchemy.orm import joinedload
+        states = session.query(State).order_by(State.id).all()
 
-    states = session.query(State).options(
-        joinedload(State.cities)
-    ).order_by(State.id).all()
+        for state in states:
+            print(f"{state.id}: {state.name}")
+            for city in state.cities:
+                print(f"    {city.id}: {city.name}")
 
-    for state in states:
-        print(f"{state.id}: {state.name}")
+        session.close()
 
-        for city in sorted(state.cities, key=lambda c: c.id):
-            print(f"    {city.id}: {city.name}")
-
-    session.close()
+    except Exception as e:
+        import traceback
+        traceback.print_exc(file=sys.stderr)
+        sys.exit(1)
