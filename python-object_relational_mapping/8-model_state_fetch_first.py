@@ -13,17 +13,17 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    
+
     engine = create_engine(
         f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}',
         pool_pre_ping=True
     )
-    
+
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     first_state = session.query(State).order_by(State.id).first()
-    
+
     if first_state is None:
         print("Nothing")
     else:
