@@ -10,7 +10,6 @@ from model_state import Base, State
 
 class City(Base):
     """City class that maps to MySQL table 'cities'
-    
     Attributes:
         id: auto-generated unique integer, primary key
         name: string of 128 characters, can't be null
