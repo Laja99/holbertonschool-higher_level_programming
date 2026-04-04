@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Items List - My Flask App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        nav { background-color: #333; color: white; padding: 10px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        main { padding: 20px; min-height: 60vh; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+        .items-container { background-color: #f4f4f4; padding: 20px; border-radius: 5px; }
+        ul { list-style-type: square; }
+        li { margin: 10px 0; padding: 5px; border-bottom: 1px solid #ddd; }
+        .empty-message { color: #666; font-style: italic; text-align: center; padding: 20px; }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>
+        <h1>Items List</h1>
+        <div class="items-container">
+            {% if items %}
+                <ul>
+                    {% for item in items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="empty-message">No items found</p>
+            {% endif %}
+        </div>
+    </main>
+    {% include 'footer.html' %}
+</body>
+</html>
